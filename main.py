@@ -6,10 +6,10 @@ from zip_utils import binary_to_zip, zip_to_binary_file
 def create_a_video(zip_file: str):
     zip_to_binary_file(zip_file=zip_file)
     binfile_to_pics("file.bin")
-    pics_to_video("testzip.avi")
+    pics_to_video("testzip.mp4")
 
 
-# create_a_video("/home/akmal/Downloads/Afrin_cv.zip")
+# create_a_video("anger.zip")
 
 
 def video_to_file(video_file: str):
@@ -18,4 +18,4 @@ def video_to_file(video_file: str):
     binary_to_zip(restore_zip="Test")
 
 
-# video_to_file("testzip.avi")
+video_to_file("testzip.mp4")

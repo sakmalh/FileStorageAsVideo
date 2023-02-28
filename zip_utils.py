@@ -20,7 +20,7 @@ def zip_to_binary_file(zip_file: str):
 
 
 def binary_to_zip(restore_zip: str):
-    with open("file.bin", 'r') as file:
+    with open("restore_file.bin", 'r') as file:
         file_contents = file.read()
         constant = ''.join([format(ord(c), '08b') for c in 'ajdlksjdajspdajsdkjsakld@jlkadknlf'])
         x = file_contents.split(constant)
@@ -38,5 +38,5 @@ def binary_to_zip(restore_zip: str):
                 zip_file.writestr(name, data)
 
 
-zip_to_binary_file('/home/akmal/Downloads/Afrin_cv.zip')
-# binary_to_zip("file")
+# zip_to_binary_file('/home/akmal/Downloads/Afrin_cv.zip')
+# binary_to_zip("test2")

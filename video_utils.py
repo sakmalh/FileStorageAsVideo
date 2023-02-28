@@ -23,12 +23,12 @@ def video_to_pics(video_file: str):
 def pics_to_video(output_video: str):
     frameSize = (480, 360)
 
-    out = cv2.VideoWriter(output_video, cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
+    out = cv2.VideoWriter(output_video, cv2.VideoWriter_fourcc(*'mp4v'), 15, frameSize)
 
-    for filename in glob.glob("video/*.png"):
-        img = cv2.imread(filename)
+    for x in range(len(glob.glob("video/*.png"))):
+        img = cv2.imread(f"video/outputvideo{x}.png")
         out.write(img)
 
     out.release()
 
-
+# video_to_pics("test2.avi")
